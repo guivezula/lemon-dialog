@@ -25,7 +25,7 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     left: unset;
     top: unset;
     bottom: 0;
@@ -40,7 +40,7 @@ const DialogHeader = styled.header`
 
 const Title = styled.span`
   font-family: Inter;
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: -0.032em;
@@ -58,18 +58,20 @@ const DialogContent = styled.div`
   padding: 0px 1.5rem 1.5rem 1.5rem;
   overflow-y: auto;
 
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  @media (min-width: 376px) {
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    }
   }
 `;
 
