@@ -12,10 +12,8 @@ const Overlay = styled.div`
 
 const Container = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  padding: 4px;
-  transform: translate(-50%, -45%);
+  bottom: 0;
+  transform: translate(0%, 0%);
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   min-height: 50%;
@@ -24,18 +22,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  @media (max-width: 375px) {
-    left: unset;
-    top: unset;
-    bottom: 0;
-    transform: translate(0%, 0%);
-  }
 `;
 
 const DialogHeader = styled.header`
   display: flex;
-  padding: 1.5rem;
+  padding: 32px;
+  height: 46px;
+  align-items: center;
 `;
 
 const Title = styled.span`
@@ -55,24 +48,8 @@ const DialogContent = styled.div`
   letter-spacing: -0.028em;
   text-align: left;
 
-  padding: 0px 1.5rem 1.5rem 1.5rem;
+  padding: 0px 32px 32px 32px;
   overflow-y: auto;
-
-  @media (min-width: 376px) {
-    ::-webkit-scrollbar {
-      width: 12px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-    }
-  }
 `;
 
 const HEADER_STYLE_CONTENT_END = {

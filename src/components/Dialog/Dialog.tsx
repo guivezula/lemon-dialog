@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { BiX } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 import useEscapeKey from "../../hooks/useEscapeKey";
 import useOverlayClick from "../../hooks/useOverlayClick";
 import {
@@ -37,7 +37,7 @@ export const Dialog = (props: DialogProps) => {
               }
             >
               {title && <Title data-testid="title-element">{title}</Title>}
-              <BiX data-testid="close-icon" onClick={onClose} />
+              <AiOutlineClose size={16} data-testid="close-icon" onClick={onClose} />
             </DialogHeader>
             {children && (
               <DialogContent data-testid="content-element">
