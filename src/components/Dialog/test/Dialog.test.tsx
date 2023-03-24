@@ -93,6 +93,16 @@ describe("Dialog component test", () => {
     expect(handler).toHaveBeenCalled();
   });
 
+  it("it should not call onClose method when another key is clicked", () => {
+    const handler = jest.fn();
+    const props: DialogProps = { ...defaultProps, onClose: handler };
+
+    const { container } = renderDialog(props);
+    fireEvent.keyDown(container, { key: "Enter" });
+
+    expect(handler).not.toHaveBeenCalled();
+  });
+
   it("it should call onClose method when Overlay is clicked and closeOnOverlayClick is true", () => {
     const handler = jest.fn();
     const props: DialogProps = {
