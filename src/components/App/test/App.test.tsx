@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from '../App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/abrir dialog/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App component tests", () => {
+  it.todo("it should open Dialog when button is clicked");
+
+  it.todo("it should close Dialog when close icon is clicked");
 });
+

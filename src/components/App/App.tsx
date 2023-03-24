@@ -8,6 +8,7 @@ function App() {
     <AppBody>
       <Button onClick={() => setOpenDialog(true)}>Abrir Dialog</Button>
       <Dialog
+        data-testid="dialog-element"
         title="Title"
         isOpen={openDialog}
         closeOnOverlayClick={true}
