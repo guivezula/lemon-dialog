@@ -29,7 +29,7 @@ export const Dialog = (props: DialogProps) => {
   return (
     <>
       {isOpen && (
-        <Overlay data-testid="overlay-element" onClick={handleOverlayClick}>
+        <Overlay data-testid="dialog-element" onClick={handleOverlayClick}>
           <Container>
             <DialogHeader
               style={

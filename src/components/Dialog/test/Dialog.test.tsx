@@ -20,7 +20,7 @@ describe("Dialog component test", () => {
   it("it should be visible when props isOpen is true", () => {
     renderDialog(defaultProps);
 
-    const component = screen.getByTestId("overlay-element");
+    const component = screen.getByTestId("dialog-element");
 
     expect(component).toBeInTheDocument();
   });
@@ -30,7 +30,7 @@ describe("Dialog component test", () => {
 
     renderDialog(props);
 
-    const component = screen.queryByTestId("overlay-element");
+    const component = screen.queryByTestId("dialog-element");
 
     expect(component).toBeNull();
   });
@@ -103,7 +103,7 @@ describe("Dialog component test", () => {
 
     renderDialog(props);
 
-    const overlay = screen.getByTestId("overlay-element");
+    const overlay = screen.getByTestId("dialog-element");
     fireEvent.click(overlay);
 
     expect(handler).toHaveBeenCalled();
@@ -119,7 +119,7 @@ describe("Dialog component test", () => {
 
     renderDialog(props);
 
-    const overlay = screen.getByTestId("overlay-element");
+    const overlay = screen.getByTestId("dialog-element");
     fireEvent.click(overlay);
 
     expect(handler).not.toHaveBeenCalled();
