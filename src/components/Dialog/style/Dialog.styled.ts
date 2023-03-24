@@ -1,16 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Overlay = styled.div `
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgb(0,0,0,0.7);
+  background-color: rgb(0, 0, 0, 0.7);
   z-index: 1000;
 `;
 
-const Container = styled.div `
+const Container = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -33,9 +33,12 @@ const Container = styled.div `
   }
 `;
 
-const DialogHeader = styled.header `
+const DialogHeader = styled.header`
   display: flex;
   padding: 1.5rem;
+`;
+
+const Title = styled.span`
   font-family: Inter;
   font-size: 36px;
   font-weight: 500;
@@ -44,7 +47,7 @@ const DialogHeader = styled.header `
   text-align: left;
 `;
 
-const DialogContent = styled.div `
+const DialogContent = styled.div`
   font-family: Inter;
   font-size: 18px;
   font-weight: 400;
@@ -56,26 +59,34 @@ const DialogContent = styled.div `
   overflow-y: auto;
 
   ::-webkit-scrollbar {
-      width: 12px;
+    width: 12px;
   }
 
   ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
-      border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   }
 `;
 
 const HEADER_STYLE_CONTENT_END = {
-  justifyContent: 'end',
+  justifyContent: "end",
 };
 
 const HEADER_STYLE_CONTENT_BETWEEN = {
-  justifyContent: 'space-between',
+  justifyContent: "space-between",
 };
 
-export {Overlay, Container, DialogHeader, DialogContent, HEADER_STYLE_CONTENT_BETWEEN, HEADER_STYLE_CONTENT_END };
+export {
+  Overlay,
+  Container,
+  DialogHeader,
+  Title,
+  DialogContent,
+  HEADER_STYLE_CONTENT_BETWEEN,
+  HEADER_STYLE_CONTENT_END,
+};

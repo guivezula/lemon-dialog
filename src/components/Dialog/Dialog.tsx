@@ -9,9 +9,10 @@ import {
   HEADER_STYLE_CONTENT_BETWEEN,
   HEADER_STYLE_CONTENT_END,
   Overlay,
+  Title,
 } from "./style/Dialog.styled";
 
-interface DialogProps {
+export interface DialogProps {
   isOpen: boolean;
   title?: string;
   onClose: () => void;
@@ -28,17 +29,21 @@ export const Dialog = (props: DialogProps) => {
   return (
     <>
       {isOpen && (
-        <Overlay onClick={handleOverlayClick}>
+        <Overlay data-testid="overlay-element" onClick={handleOverlayClick}>
           <Container>
             <DialogHeader
               style={
                 title ? HEADER_STYLE_CONTENT_BETWEEN : HEADER_STYLE_CONTENT_END
               }
             >
-              {title}
-              <BiX onClick={onClose} />
+              {title && <Title data-testid="title-element">{title}</Title>}
+              <BiX data-testid="close-icon" onClick={onClose} />
             </DialogHeader>
-            <DialogContent>{children}</DialogContent>
+            {children && (
+              <DialogContent data-testid="content-element">
+                {children}
+              </DialogContent>
+            )}
           </Container>
         </Overlay>
       )}
