@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Dialog, DialogProps } from "../Dialog";
+import Dialog, { DialogProps } from "../Dialog";
 
 const renderDialog = (props: DialogProps) => {
   return render(<Dialog {...props} />);

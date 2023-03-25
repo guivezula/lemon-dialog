@@ -20,7 +20,7 @@ export interface DialogProps {
   children?: ReactNode;
 }
 
-export const Dialog = (props: DialogProps) => {
+const Dialog = (props: DialogProps) => {
   const { closeOnOverlayClick, isOpen, onClose, children, title } = props;
   const handleOverlayClick = useOverlayClick(closeOnOverlayClick, onClose);
 
@@ -50,3 +50,5 @@ export const Dialog = (props: DialogProps) => {
     </>
   );
 };
+
+export default Dialog;

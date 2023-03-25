@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Dialog from "../Dialog";
 import { AppBody, Button } from "./style/App.styled";
 
-function App() {
+const App = () => {
   const [openDialog, setOpenDialog] = useState(false);
   return (
     <AppBody>
