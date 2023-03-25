@@ -8,7 +8,7 @@ const AppBody = styled.div `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(0.625rem + 2vmin);
   color: white;
 `;
 
@@ -17,9 +17,9 @@ const Button = styled.button `
   border: 2px solid white;
   color: white;
   border-radius: 3px;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  font-size: 20px;
+  margin: 0 1rem;
+  padding: 0.25rem 1rem;
+  font-size: 1.25rem;
   font-family: Inter;
   font-weight: 400;
 

@@ -26,29 +26,29 @@ const Container = styled.div`
 
 const DialogHeader = styled.header`
   display: flex;
-  padding: 32px;
-  height: 46px;
+  padding: 2rem;
+  height: 2.875rem;
   align-items: center;
 `;
 
 const Title = styled.span`
   font-family: Inter;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 1.875px;
   letter-spacing: -0.032em;
   text-align: left;
 `;
 
 const DialogContent = styled.div`
   font-family: Inter;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: -0.028em;
   text-align: left;
 
-  padding: 0px 32px 32px 32px;
+  padding: 0px 2rem 2rem 2rem;
   overflow-y: auto;
 `;
 
