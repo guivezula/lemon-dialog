@@ -1,47 +1,33 @@
-# Getting Started with Create React App
+# Dialog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Como descrito na documentação, esse aplicativo tem como objetivo avaliar meus conhecimentos em front-end desenvolvendo um Dialog em `React` utlizando alguma biblioteca de estilização. Nesse caso, como sugerido foi utilizado o `styled-components`.
 
-## Available Scripts
+Nas seções a seguir vou apresentar os `scripts` para instalar e rodar a aplicação, bem como os testes automatizados, além de descrever os principais componentes desenvolvidos e seus funcionamentos. 
 
-In the project directory, you can run:
+## Scripts disponíveis
+
+No diretório raiz, os seguintes comandos podem ser rodados:
+
+### `npm install`
+
+Instala todas as dependências da aplicação. Para seu desenvolvimento foi utilizado a versão `12.18.2` do `node` e a versão `6.14.6` do `npm`. 
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Roda a aplicação em modo de desenvolvimento através da URL [http://localhost:3000](http://localhost:3000) podendo ser aberto pelo browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run test`
 
-### `npm test`
+Inicia os testes de modo interativo, por default roda todos os testes, ou pode seguir as instruções para rodar apenas um arquivo específico. Nesse caso, escolha a opção `p`, digite o nome do arquivo e selecione, deste modo será possível ver a lista de testes que passaram e falharam com a descrição do teste.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nesse app possuem dois arquivos de teste:
+- `src/components/App/test/App.test.tsx`: que possuem testes relacionados a integração entre a página pricipal e o Dialog.
+- `src/components/Dialog/test/Dialog.test.tsx`: que possuem testes relacionados a testes de funcionalidade do componente Dialog de acordo com suas propriedades.
 
-### `npm run build`
+### `npm run test:coverage`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inicia os testes e nesse caso considera a cobertura de testes na aplicação, exibe todos os arquivos e sua cobetura em testes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run build` e `npm run eject`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# lemon-dialog
+São comando para buildar e ejetar o build para publicação, foi deixado como padrão, caso seja necessário já que o intuito não é publicar.
