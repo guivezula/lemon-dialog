@@ -13,6 +13,8 @@ const Overlay = styled.div`
 const Container = styled.div`
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   transform: translate(0%, 0%);
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
